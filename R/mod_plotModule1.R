@@ -13,7 +13,13 @@ mod_plotModule1_ui <- function(id){
 
     sidebarLayout(
       sidebarPanel(
-        "peptide_sequence"
+        textAreaInput(
+          inputId = ns("peptide"),
+          label = "Peptide sequence",
+          width = 300,
+          height = 100,
+          placeholder = "Insert peptide sequence"
+        )
       ),
       mainPanel(
         "plot"
