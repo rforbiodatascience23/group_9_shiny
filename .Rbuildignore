@@ -8,5 +8,9 @@ $run_dev.*
 ^LICENSE\.md$
 ^README\.Rmd$
 ^CODE_OF_CONDUCT\.md$
+=======
+>>>>>>> 22fabbaa6434d0177fe73ac714a186903b968032
+=======
+>>>>>>> 35be5dd1494173f80abd30dbe3aba32cb86fa365
 ^app\.R$
 ^rsconnect$
