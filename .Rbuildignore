@@ -7,6 +7,7 @@ $run_dev.*
 ^.here$
 ^LICENSE\.md$
 ^README\.Rmd$
+<<<<<<< HEAD
 ^CODE_OF_CONDUCT\.md$
 =======
 >>>>>>> 22fabbaa6434d0177fe73ac714a186903b968032

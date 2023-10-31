@@ -9,13 +9,14 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
+
     fluidPage(
       h1("DogmaApp"),
       tabsetPanel(
         tabPanel(title = "panel1",
                  "module1"),
-        tabPanel(title = "panel2",
-                 "module2")
+        tabPanel(title = "Plotting",
+                 mod_plotModule1_ui("plotModule1_1"))
       )
     )
   )
