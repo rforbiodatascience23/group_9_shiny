@@ -10,10 +10,9 @@
 mod_plotModule1_ui <- function(id){
   ns <- NS(id)
   tagList(
-
-    sidebarLayout(
-      sidebarPanel(
-        textAreaInput(
+    shiny::sidebarLayout(
+      shiny::sidebarPanel(
+        shiny::textAreaInput(
           inputId = ns("peptide"),
           label = "Peptide sequence",
           width = 300,
@@ -21,8 +20,11 @@ mod_plotModule1_ui <- function(id){
           placeholder = "Insert peptide sequence"
         )
       ),
-      mainPanel(
-        "plot"
+      shiny::mainPanel(
+        shiny::plotOutput(
+          outputId = ns("abundance")
+        )
+
       )
     )
   )
