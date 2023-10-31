@@ -13,8 +13,8 @@ app_ui <- function(request) {
     fluidPage(
       h1("DogmaApp"),
       tabsetPanel(
-        tabPanel(title = "panel1",
-                 "module1"),
+        tabPanel(title = "DNA to peptide sequence",
+                 mod_DNA_to_pep_ui("DNA_to_pep_1")),
         tabPanel(title = "Plotting",
                  mod_plotModule1_ui("plotModule1_1"))
       )

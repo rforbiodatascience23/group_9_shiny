@@ -43,8 +43,8 @@ mod_plotModule1_server <- function(id){
         NULL
       } else{
         input$peptide |>
-          group9PackcentralDogma::aa_counts() +
-          ggplot2::theme(legend.position = "none")
+          aa_counts() +
+          theme(legend.position = "none")
       }
     })
   })
