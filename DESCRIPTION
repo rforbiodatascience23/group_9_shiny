@@ -1,13 +1,16 @@
 Package: DogmaApp
 Title: PKG_TITLE
 Version: 0.0.0.9000
-Authors@R: c(person(given = "Magnus", family = "Hilarius", role = c('cre', 'aut'), email = 's204581@student.dtu.dk'), person(given = "Lucio", family = "Stevns", role = c("cre"), email = "s225031@dtu.dk"), person(given = “Masha”, family = “Tvile”, role = c("cre"), email = "s225084@student.dtu.dk"),person(given = "Silvia", family = "Goldasova", role = c("cre"), email = "s231820@dtu.dk"),person(given = "Oliver", family = "Sellberg", role = c("cre"), email = "s204692@student.dtu.dk"))
+Authors@R: c(
+ .
+   )
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
+    ggplot2,
     golem (>= 0.4.1),
-    pkgload,
+    group9PackcentralDogma,
     shiny (>= 1.7.5)
 Encoding: UTF-8
 LazyData: true

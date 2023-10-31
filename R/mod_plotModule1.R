@@ -33,6 +33,8 @@ mod_plotModule1_ui <- function(id){
 #' plotModule1 Server Functions
 #'
 #' @noRd
+#' @importfrom ggplot2 theme
+#' @import group9PackcentralDogma
 mod_plotModule1_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
