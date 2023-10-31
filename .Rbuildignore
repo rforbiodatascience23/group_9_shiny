@@ -15,3 +15,5 @@ $run_dev.*
 =======
 >>>>>>> 22fabbaa6434d0177fe73ac714a186903b968032
 >>>>>>> b451802ffbdb83387408075aee20716f00c329da
+^app\.R$
+^rsconnect$
