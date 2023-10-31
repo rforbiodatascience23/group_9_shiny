@@ -36,7 +36,15 @@ mod_plotModule1_ui <- function(id){
 mod_plotModule1_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-
+    output$abundance <- renderPlot({
+      if(input$peptide == ""){
+        NULL
+      } else{
+        input$peptide |>
+          group9PackcentralDogma::aa_counts() +
+          ggplot2::theme(legend.position = "none")
+      }
+    })
   })
 }
 
