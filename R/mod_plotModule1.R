@@ -18,6 +18,10 @@ mod_plotModule1_ui <- function(id){
           width = 300,
           height = 100,
           placeholder = "Insert peptide sequence"
+        ),
+        shiny::actionButton(
+          inputId = ns("paste_peptide"),
+          label = "Paste the peptide seq from the previous tab", style = "margin-top: 18px;"
         )
       ),
       shiny::mainPanel(

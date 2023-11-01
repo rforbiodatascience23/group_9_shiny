@@ -14,7 +14,7 @@ mod_DNA_to_pep_ui <- function(id){
       column(8, shiny::uiOutput(ns("DNA"))),
       column(4, shiny::numericInput(
         inputId = ns("dna_length"),
-        value = 6000,
+        value = 1000,
         min = 3,
         max = 100000,
         step = 3,
@@ -36,8 +36,10 @@ mod_DNA_to_pep_ui <- function(id){
 #' @noRd
 mod_DNA_to_pep_server <- function(id){
   moduleServer( id, function(input, output, session){
+
     dna <- reactiveVal()
     ns <- session$ns
+
     output$DNA <- renderUI({
       textAreaInput(
         inputId = ns("DNA"),
@@ -48,6 +50,26 @@ mod_DNA_to_pep_server <- function(id){
         width = 600
       )
     })
+
+    observeEvent(input$generate_dna, {
+      dna(group9PackcentralDogma::dna_generator(input$dna_length))
+    })
+
+    output$peptide <- renderText({
+      # Ensure input is not NULL and is longer than 2 characters
+      if(is.null(input$DNA)){
+        NULL
+      } else if(nchar(input$DNA) < 3){
+        NULL
+      } else{
+        input$DNA |>
+          toupper() |>
+          group9PackcentralDogma::transcription() |>
+          group9PackcentralDogma::get_codons() |>
+          group9PackcentralDogma::translator()
+      }
+    })
+
   })
 }
 
