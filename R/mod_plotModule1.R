@@ -47,6 +47,11 @@ mod_plotModule1_server <- function(id){
           ggplot2::theme(legend.position = "none")
       }
     })
+    observeEvent(input$generate_dna, {
+      dna(
+        group9PackcentralDogma::dna_generator(input$dna_length)
+      )
+    })
   })
 }
 
